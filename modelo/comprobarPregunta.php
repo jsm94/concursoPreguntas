@@ -25,5 +25,7 @@
         }
     }
 
+
+    // TODO: Comprimirlo para que sirva a cualquier pregunta
     header('Location: index.php');
 ?>

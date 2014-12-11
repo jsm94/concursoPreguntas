@@ -36,6 +36,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+// TODO: Cambiar estructura para las preguntas. En vez de boolean poner valores (correcta,incorrecta,noContestada)
 $crearTabla = "CREATE TABLE Usuarios (id int PRIMARY KEY AUTO_INCREMENT, user varchar(6), pass varchar(6), p1 boolean, p2 boolean, p3 boolean, tiempo timestamp);";
 
 if ($conn->query($crearTabla) === TRUE) {

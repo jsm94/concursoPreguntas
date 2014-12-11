@@ -5,7 +5,7 @@
 
     <?php
     if(file_exists("conf-bd.php")){
-        if(!isset($_SESSION["user"])){
+        if(!isset($_SESSION["user"])){ // CHANGES: Se ha invertido (!isset) para acceder directamente a las preguntas
             if(isset($_SESSION["p1"],$_SESSION["p2"],$_SESSION["p3"])){
                 echo "pfinal";
             }
