@@ -36,7 +36,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$crearTabla = "CREATE TABLE Usuarios (id int PRIMARY KEY AUTO_INCREMENT, user varchar(6), pass varchar(6), contestadas int, correctas int, falladas int, tiempo varchar(30));";
+$crearTabla = "CREATE TABLE Usuarios (id int PRIMARY KEY AUTO_INCREMENT, user varchar(6), pass varchar(6), p1 boolean, p2 boolean, p3 boolean, tiempo timestamp);";
 
 if ($conn->query($crearTabla) === TRUE) {
     $fichero = fopen("../conf-bd.php", "w") or die("No se puede crear el fichero");
