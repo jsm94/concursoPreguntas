@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <?php include_once "head.php"; ?>
+
+    <!-- Cabecera -->
+    <?php include_once "vista/head.php"; ?>
 
     <?php
         if (file_exists("conf-bd")){
             // LOGIN + PAGINAS AQUI
-        }else{
+        } else {
             include_once "createDB.php";
         }
     ?>
 
-    <?php include_once "footer.php"; ?>
+    <!-- Cabecera -->
+    <?php include_once "vista/footer.php"; ?>
 </html>
