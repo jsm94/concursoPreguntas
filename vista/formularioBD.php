@@ -8,7 +8,7 @@
     <h4>Rellena los siguientes campos para crear la base de datos</h4>
     <br>
     <div class="col-md-6 col-md-offset-2 col-xs-12">
-        <form role="form" action="modulos/crearBD.php" method="post">
+        <form role="form" action="modelo/crearBD.php" method="post">
             <div class="form-group">
                 <label for="dominio">Dominio</label>
                 <input type="text" class="form-control" name="dominio" id="dominio" placeholder="ej. localhost, www.ejemplo.es, 192.168.1.130...">
