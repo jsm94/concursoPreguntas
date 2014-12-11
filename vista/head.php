@@ -11,5 +11,5 @@
     <title>Concurso de Preguntas</title>
     <meta name="description" content="Concurso de preguntas y respuestas">
     <meta name="viewport" content="width=device-width">
-    <!-- TODO: Aquí se incluirán los modelos necesarios -->
+    <!-- TODO{Aquí se incluirán los modelos necesarios} -->
 </head>
