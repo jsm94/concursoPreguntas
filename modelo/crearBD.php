@@ -37,7 +37,7 @@ if ($conn->connect_error) {
 }
 
 // TODO: Cambiar estructura para las preguntas. En vez de boolean poner valores (correcta,incorrecta,noContestada)
-$crearTabla = "CREATE TABLE resultados (p1 TINYINT(1), p2 TINYINT(1), p3 TINYINT(1), tiempo timestamp);";
+$crearTabla = "CREATE TABLE resultados (p1 TINYINT(1), p2 TINYINT(1), p3 TINYINT(1), tiempo INT);";
 
 if ($conn->query($crearTabla) === TRUE) {
     $fichero = fopen("../conf-bd.php", "w") or die("No se puede crear el fichero");
