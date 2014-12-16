@@ -2,11 +2,11 @@
 require_once("../conf-global.php");
 
 $server = $_POST['dominio'];
-$user = $_POST['user'];
+$userName = $_POST['user'];
 $pass = $_POST['pass'];
 
 // Creamos la conexión
-$conn = new mysqli($server, $user, $pass);
+$conn = new mysqli($server, $userName, $pass);
 
 // Comprobamos la conexión
 if ($conn->connect_error) {
@@ -28,7 +28,7 @@ if ($conn->query($crearBD) === TRUE) {
 $conn->close();
 
 // Crear conexión con la base de datos creada
-$conn = new mysqli($server, $user, $pass, $bd);
+$conn = new mysqli($server, $userName, $pass, $bd);
 
 if ($conn->connect_error) {
     echo "<br><br>";
@@ -44,7 +44,7 @@ if ($conn->query($crearTabla) === TRUE) {
     $contenido = "
     <?php
     \$server = '$server';
-    \$user = '$user';
+    \$userName = '$userName';
     \$pass = '$pass';
     \$use_bd = '$bd';
     ?>
