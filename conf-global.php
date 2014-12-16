@@ -1,4 +1,4 @@
 <?php
-$domain = "localhost/PHP/Boletin1/ej8";
+$domain = "localhost/";
 $bd = "pyrBD";
 ?>
