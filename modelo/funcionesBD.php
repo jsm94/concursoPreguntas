@@ -18,23 +18,22 @@ function guardarBD($pregunta1, $pregunta2, $pregunta3, $tiempoTotal){
     }
 }
 
-function mostrarRanking(){
+function getRanking(){
     include '../conf-bd.php';
     //Leemos todos los resultados de la base de datos
     try {
-        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $user, $pass);
+        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $userName, $pass);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT p1,p2,p3,tiempo FROM resultados ORDER BY tiempo LIMIT 5";
 
+        $arrayRows = array();
+        $counter = 0;
         foreach ($conn->query($sql) as $row){
-            echo "<h3>
-                    Pregunta 1: ".$row["p1"].
-                    "Pregunta 2: ".$row["p2"].
-                    "Pregunta 3: ".$row["p3"].
-                    "Tiempo:  ".$row["tiempo"].
-                "</h3>";
+            $arrayRows[$counter] = $row;
+            $counter++;
         }
+        return $arrayRows;
 
     }catch(PDOException $e){
         echo $sql . "<br>" . $e->getMessage();
