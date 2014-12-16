@@ -27,5 +27,5 @@
     }
 
     // TODO: Comprimirlo para que sirva a cualquier pregunta
-    header('Location: index.php');
+    header('Location: ../index.php');
 ?>
