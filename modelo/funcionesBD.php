@@ -30,7 +30,7 @@ function getRanking(){
         $arrayRows = array();
         $counter = 0;
         foreach ($conn->query($sql) as $row){
-            $arrayRows[$counter] = $row;
+            $arrayRows[$counter] = array($row['p1'],$row['p2'],$row['p3'],$row['tiempo']);
             $counter++;
         }
         return $arrayRows;
