@@ -1,7 +1,8 @@
 <?php
-include '../conf-bd.php';
+
 
 function guardarBD($pregunta1, $pregunta2, $pregunta3, $tiempoTotal){
+    include '../conf-bd.php';
     try {
         $conn = new PDO("mysql:host=$server;dbname=$use_bd", $userName, $pass);
         // set the PDO error mode to exception
@@ -18,6 +19,7 @@ function guardarBD($pregunta1, $pregunta2, $pregunta3, $tiempoTotal){
 }
 
 function mostrarRanking(){
+    include '../conf-bd.php';
     //Leemos todos los resultados de la base de datos
     try {
         $conn = new PDO("mysql:host=$server;dbname=$use_bd", $user, $pass);
