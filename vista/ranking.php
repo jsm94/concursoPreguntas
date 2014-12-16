@@ -4,7 +4,7 @@ $ranking = getRanking();
 ?>
 <div class="container">
     <h1>TOP 5</h1>
-    <table>
+    <table class="table">
         <tr>
             <th>Pregunta 1</th>
             <th>Pregunta 2</th>
