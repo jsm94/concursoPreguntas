@@ -22,7 +22,7 @@ function getRanking(){
     include '../conf-bd.php';
     //Leemos todos los resultados de la base de datos
     try {
-        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $user, $pass);
+        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $userName, $pass);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT p1,p2,p3,tiempo FROM resultados ORDER BY tiempo LIMIT 5";
