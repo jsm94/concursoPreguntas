@@ -10,10 +10,10 @@
                 echo "pfinal";
             }
             else if(isset($_SESSION["p1"],$_SESSION["p2"])){
-                include_once "vista/pregunta1.php";
+                include_once "vista/pregunta3.php";
             }
             else if(isset($_SESSION["p1"])){
-                include_once "vista/pregunta1.php";
+                include_once "vista/pregunta2.php";
             } else {
                 include_once "vista/pregunta1.php";
             }
