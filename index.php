@@ -13,7 +13,6 @@
                 echo "p3";
             }
             else if(isset($_SESSION["p1"])){
-                $_SESSION["p2"] = false;
                 echo "p2";
             } else {
                 include_once "vista/pregunta1.php";
