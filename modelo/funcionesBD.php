@@ -3,7 +3,7 @@ include '../conf-bd.php';
 
 function guardarBD($pregunta1, $pregunta2, $pregunta3, $tiempoTotal){
     try {
-        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $user, $pass);
+        $conn = new PDO("mysql:host=$server;dbname=$use_bd", $userName, $pass);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully";
