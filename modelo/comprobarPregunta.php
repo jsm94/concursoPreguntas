@@ -23,7 +23,7 @@
     //cuando llegamos a la última pregunta,guardamos el resultado y el tiempo
     if ( $pregunta === "p3" ){
         echo "última pregunta";
-        guardarDB($_SESSION["p1"],$_SESSION["p2"],$_SESSION["p3"],time()-$_SESSION["tiempo"]);
+        guardarBD($_SESSION["p1"],$_SESSION["p2"],$_SESSION["p3"],time()-$_SESSION["tiempo"]);
     }
 
     // TODO: Comprimirlo para que sirva a cualquier pregunta
