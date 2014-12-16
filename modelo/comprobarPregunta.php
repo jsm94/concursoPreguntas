@@ -1,30 +1,27 @@
 <?php
+    include 'funcionesBD.php';
+
+    session_start();
+
     $pregunta = $_POST["pregunta"];
     $respuesta = $_POST["respuesta"];
     $respuestaCorrecta = $_POST["respuestaCorrecta"];
 
-    if ($pregunta === "p1"){
-        if ($respuesta === $respuestaCorrecta){
-            $_SESSION["p1"] = true;
-        }else{
-            $_SESSION["p1"] = false;
-        }
-    }
-    else if ($pregunta === "p2"){
-        if ($respuesta === $respuestaCorrecta){
-            $_SESSION["p2"] = true;
-        }else{
-            $_SESSION["p2"] = false;
-        }
-    }
-    else if ($pregunta === "p3"){
-        if ($respuesta === $respuestaCorrecta){
-            $_SESSION["p3"] = true;
-        }else{
-            $_SESSION["p3"] = false;
-        }
+    if ( $pregunta === "p1" ){
+        $_SESSION["tiempo"] = time();
     }
 
+    $acierto=0;
+
+    if ( $respuesta === $respuestaCorrecta ){
+        $acierto = 1;
+    }
+
+    $_SESSION[$pregunta] = $acierto;
+
+    if ( $pregunta === "p3" ){
+        guardarDB($_SESSION["p1"],$_SESSION["p2"],$_SESSION["p3"],time()-$_SESSION["tiempo"]);
+    }
 
     // TODO: Comprimirlo para que sirva a cualquier pregunta
     header('Location: index.php');
