@@ -19,7 +19,7 @@ function guardarBD($pregunta1, $pregunta2, $pregunta3, $tiempoTotal){
 }
 
 function getRanking(){
-    include '../conf-bd.php';
+    include 'conf-bd.php';
     //Leemos todos los resultados de la base de datos
     try {
         $conn = new PDO("mysql:host=$server;dbname=$use_bd", $userName, $pass);
